@@ -51,7 +51,7 @@ public class NasaConnect{
     }
 
       public void asyncCalls(string[] list,string type){  
-         
+         return;
         var tasks = new List<Task>();
         
         foreach (var url in list)
@@ -61,15 +61,12 @@ public class NasaConnect{
             }else if(type=="images"){
                 tasks.Add(downloadImagesFromNASA(url));
             }
-        }  
+        }
+        try{  
         Task.WaitAll(tasks.ToArray());
+        }catch(Exception e){
+            Console.WriteLine(e);
+        }
     }
-
-    
-    
-
-    
-
-    
 }
 

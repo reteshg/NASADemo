@@ -1,0 +1,11 @@
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/bin/Debug/netcoreapp2.2/NasaDemo.deps.json
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/bin/Debug/netcoreapp2.2/NasaDemo.runtimeconfig.json
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/bin/Debug/netcoreapp2.2/NasaDemo.runtimeconfig.dev.json
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/bin/Debug/netcoreapp2.2/NasaDemo.dll
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/bin/Debug/netcoreapp2.2/NasaDemo.pdb
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/obj/Debug/netcoreapp2.2/NasaDemo.csprojAssemblyReference.cache
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/obj/Debug/netcoreapp2.2/NasaDemo.csproj.CoreCompileInputs.cache
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/obj/Debug/netcoreapp2.2/NasaDemo.AssemblyInfoInputs.cache
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/obj/Debug/netcoreapp2.2/NasaDemo.AssemblyInfo.cs
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/obj/Debug/netcoreapp2.2/NasaDemo.dll
+/Users/Preeti/Documents/Projects/Csharp/NASADemo/obj/Debug/netcoreapp2.2/NasaDemo.pdb

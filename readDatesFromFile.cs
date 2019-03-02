@@ -10,7 +10,9 @@ using System.Collections;
 using System.Globalization;
 using System.Collections.Generic;
   public class readDatesFromFile{
-    public string[] readDates(string folderName="dates"){   //all text file from the dates folder will be read
+
+    //funtion to read all text file inside the dates folder
+    public string[] readDates(string folderName="dates"){
       
       DateTime parsedDate; //manipulate dates fetched from the dates text files
       List<string> dateList = new List<string>(); //store all the valid dates in this list

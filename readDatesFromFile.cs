@@ -1,6 +1,7 @@
 /*
 Programming Language: C# 
 Codebase to read text file with dates data
+Function readDates: Read each line of dates from the text files
 */
 
 using System;

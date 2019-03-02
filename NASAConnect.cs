@@ -1,3 +1,10 @@
+/*
+Programming Language: C# 
+Codebase to connect to NASA API to fetch meta dats and download images to a local folder
+Function readNasaAPI: Read image URL provided in JSON format form NASA API based on date parameter
+Function downloadImagesFromNASA: Download images using NASA API
+Function asyncCalls: Makes asyn calls to NASA API based on data type (JSON or IMAGES)
+ */
 using System;
 using System.Net;
 using Newtonsoft.Json;
@@ -51,7 +58,7 @@ public class NasaConnect{
     }
 
       public void asyncCalls(string[] list,string type){  
-         return;
+         
         var tasks = new List<Task>();
         
         foreach (var url in list)

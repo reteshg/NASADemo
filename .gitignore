@@ -1,6 +1,9 @@
-*.txt
 *.csproj
 /bin
 /obj
+/dates
+/images
+/json
 *.js
-*.jpg
+*.txt
+*jpg

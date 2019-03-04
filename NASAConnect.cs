@@ -39,6 +39,7 @@ public class NasaConnect{
                         images.Add(temp);  // add image URL to list
                     }
 
+                    //START: CODE to save json data to render on webpage. This code render json with count of images downloaded for each date
                     var photocount = imgurl.photos.Count;
                     var countJson = new {   
                         cnt = photocount,
@@ -50,7 +51,9 @@ public class NasaConnect{
                     using (FileStream fs = File.Create("json/"+date+".js")){
                         Byte[] info = new UTF8Encoding(true).GetBytes(saveCountJson);
                         fs.Write(info, 0, info.Length);
-                    }   
+                    }
+                    //END: Webpage Code ends
+
                 }catch(Exception e){
                      Console.WriteLine(e);
                  }
@@ -64,11 +67,12 @@ public class NasaConnect{
         
         using (var webClient = new WebClient()){
 
-            string[] urlSplit=imageurl.Split("~");
+            //manage filename of image files
+            string[] urlSplit=imageurl.Split("~"); 
             var url=urlSplit[0];
             var folder=urlSplit[1];
             
-            int nextIndex = Interlocked.Increment(ref count);
+            int nextIndex = Interlocked.Increment(ref count); //Increment call to mange file name with Async calls
 
             try{
                 await webClient.DownloadFileTaskAsync(url, Constants.imagesFolderName+"/" +folder+"/_"+ nextIndex + ".jpg");    // async call to download images

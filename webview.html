@@ -1,0 +1,42 @@
+<html>
+<script type="text/javascript" src="json/folder.js"></script>
+<script>var obj = JSON.parse(j); </script>
+<script>
+//alert(obj[1].dt);
+//alert(obj.length);
+for (i=0;i<=obj.length-1;i++){
+    var script = document.createElement('script');
+        script.src = 'json/'+obj[i].dt+'.js';
+        document.write(script.outerHTML);
+    }
+
+document.write("<select>");
+    document.write("<option  selected='selected' value='sel'>Select Date</option>");
+    for (i=0;i<=obj.length-1;i++){
+    document.write("<option onClick='getfilename(this.value)' value='"+obj[i].dt+"'>"+obj[i].dt+"</option>");
+    }
+document.write("<select>");
+
+function getfilename(ofilename){
+    
+    filename=ofilename.replace("-", "_");
+    filename=filename.replace("-", "_");
+    filename="j_"+filename+"_j";
+    
+    
+    
+    var objnew = JSON.parse(eval(filename));
+    var str="";
+    document.getElementById("img").innerHTML = "";
+    for (i=1;i<=objnew.cnt-1;i++){
+        str=str+"<img height='100' width='100' src='images/"+ofilename+"/i_"+i+".jpg'>";    
+    } 
+    document.getElementById("img").innerHTML = str;
+}
+        
+</script>
+<body>
+    <div id="img"></div>
+    
+</body>
+</html>

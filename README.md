@@ -3,3 +3,9 @@ Connect NASA APIs to download images clicked by ROVER. The application has benn 
 The script reads the data from a text file with dates stored in different formats. It formats the dates accepted the by NASA API and fetchs images clicked by the Rover application on that particular date.
 
 The application takes a multi threaded approach to read JSON files and download images using the API.
+
+
+Requirements:
+.NET Core SDK 2.2.104 (Instaltion link https://dotnet.microsoft.com/download)
+JSON.Net (Installation link https://www.nuget.org/packages/Newtonsoft.Json/)
+

@@ -13,15 +13,20 @@ namespace NasaDemo
     public static void Main (string[] args) {
   
       // Read dates from the text file
-      readDatesFromFile Ob_ReadDates=new readDatesFromFile();
-      string[] datesArr=new string[Ob_ReadDates.readDates("dates").Length]; //Cast LIST object to string ARRAY
-      datesArr=Ob_ReadDates.readDates("dates");
+      fileHandling Ob_filehandling=new fileHandling();
+      
+      Ob_filehandling.checkFolders(); //check if all necessary folders exists
+      
+      //Constants Ob_constants=new Constants();
       
       //Make Async calls to read JSON and download images from NASA Site
       NasaConnect Ob_NASAConnect=new NasaConnect(); 
-      Ob_NASAConnect.asyncCalls(datesArr,"json"); //Call to extract IMAGE URL from NASA API 
+      Ob_NASAConnect.asyncCalls(Ob_filehandling.readDates(Constants.datesFolderName),"json"); //Call to extract IMAGE URL from NASA API 
+      
       string[] stringArray = Ob_NASAConnect.images.ToArray(); //Convert LIST object to string ARRAY 
       Ob_NASAConnect.asyncCalls(stringArray,"images"); //Call to download images
+
+      Ob_filehandling.renameImages();
    
     }
   }

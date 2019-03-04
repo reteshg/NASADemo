@@ -1,6 +1,6 @@
-/images
-/temp
-dates.txt
-NasaDemo.csproj
+*.txt
+*.csproj
 /bin
 /obj
+*.js
+*.jpg

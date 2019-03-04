@@ -4,7 +4,7 @@ NASADemo project connects NASA APIs to download images clicked by the ROVER on a
 The app read dates from a text file and hits NASA Rover api to fetch images clicked on that particular date.
 The application takes multi-threaded approach to read JSON files from NASA REST API and download the images.
 
-##Prerequisites:
+## Prerequisites:
 
 .NET Core SDK 2.2.104 
 
@@ -17,7 +17,7 @@ JSON.Net
 Installation link https://www.nuget.org/packages/Newtonsoft.Json/
 ```
 
-##Note:
+## Note:
 Latest code has already been run once and all files have been uploaded on git. Simply open "webview.html" file in your browser to see the images clicked by ROVER on 2nd June 2018 
 
 ## Setup
@@ -28,7 +28,7 @@ Latest code has already been run once and all files have been uploaded on git. S
 * Add/modify dates.txt file in "dates" folder and run the project from console
 * Subscribe to [NASA API](https://api.nasa.gov/api.html) and get your API key to connect with NASA Rest services
 
-##Files
+## Code Files
 ### Program.cs: File with "Main" function
     * Calls function to check if all necessary folders (IMAGES, JSON, DATES) are available
     * Calls function:asyncCalls to fetch URL of all the images

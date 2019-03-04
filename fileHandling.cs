@@ -55,8 +55,9 @@ using System.Text;
 
 
       string[] arr = dateList.ToArray(); //cast list to array
-      string[] arrDistinct = arr.Distinct().ToArray();
+      string[] arrDistinct = arr.Distinct().ToArray(); //remove dates with duplicate values
 
+      //check to find inace text file has no dates
       if (dateList.Count==0){
         Console.WriteLine("Error: No dates mentioned in the text file/s inside the 'dates' folder.");
       }else{
@@ -97,12 +98,10 @@ using System.Text;
       //Delete js files with previous data
       DirectoryInfo dij = new DirectoryInfo(json);
       if (Directory.Exists(json)){  
-      foreach (FileInfo filename in dij.GetFiles()){
-        File.Delete(filename.ToString()); 
+        foreach (FileInfo filename in dij.GetFiles()){
+          File.Delete(filename.ToString()); 
+        }
       }
-      }
-      
-      
       
       //Create directories necessary for the code to run successfully
       if (!Directory.Exists(images)) {
@@ -115,11 +114,13 @@ using System.Text;
         Directory.CreateDirectory(json);
       }
       
+      //Check if text files are added with dates
       string[] filePaths = Directory.GetFiles(dates);
       if (filePaths.Length==0){
         Console.WriteLine("Error: No text file available in 'dates' directory");
         return;
       }
+      
         return;
       }
     
